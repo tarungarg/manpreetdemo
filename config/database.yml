@@ -15,13 +15,25 @@
 # gem 'pg'
 #
 
+
 development:
   adapter: postgresql
-  host: localhost
-  database: bmc_dev
+  host: ec2-52-15-171-65.us-east-2.compute.amazonaws.com
+  port: 5432
+  database: bestmadetest
   encoding: utf8
-  username: postgres
-  password: postgres
+  username: bestmadetest
+  password: bestmadetest
+  schema_search_path: "public,citext"
+
+production:
+  adapter: postgresql
+  host: ec2-52-15-171-65.us-east-2.compute.amazonaws.com
+  port: 5432
+  database: bestmadetest
+  encoding: utf8
+  username: bestmadetest
+  password: bestmadetest
   schema_search_path: "public,citext"
 
   # The specified database role being used to connect to postgres.
